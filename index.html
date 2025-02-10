@@ -54,7 +54,7 @@
         .text{
             margin: 0px 20px 20px;
         }
-        .contact-info p {
+        .contact-info span {
             display: flex;
             align-items: center;
             justify-content: center;
@@ -64,12 +64,45 @@
             margin: 5px 0;
             cursor: pointer;
         }
-        .contact-info p img {
+        .contact-info span img {
             width: 20px;
             height: 20px;
             margin-right: 8px;
         }
+        .copied-message {
+            position: absolute;
+            bottom: -20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: #28a745;
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 12px;
+            opacity: 0;
+            transition: opacity 0.5s ease-in-out;
+        }
     </style>
+    <script>
+        function copyToClipboard(text, element) {
+            const textarea = document.createElement("textarea");
+            textarea.value = text;
+            document.body.appendChild(textarea);
+            textarea.select();
+            document.execCommand("copy");
+            document.body.removeChild(textarea);
+            
+            let message = document.createElement("div");
+            message.className = "copied-message";
+            message.textContent = "Copied!";
+            element.appendChild(message);
+            setTimeout(() => message.style.opacity = 1, 100);
+            setTimeout(() => {
+                message.style.opacity = 0;
+                setTimeout(() => element.removeChild(message), 500);
+            }, 1500);
+        }
+    </script>
 </head>
 <body>
     <div class="rada">
@@ -81,12 +114,12 @@
         <div class="title">People’s Deputy of Ukraine</div>
         <div class="text">Chairman of the Subcommittee on Energy Saving and Energy Efficiency within the Committee on Energy, Housing and Utility Services of the Verkhovna Rada of Ukraine</div>
         <div class="contact-info">
-            <p href="#" onclick="copyToClipboard('+380 67 778 1440')">
+            <span onclick="copyToClipboard('+380 67 778 1440')">
                 <img src="whatsapp-icon.png" alt="WhatsApp">+380 67 778 1440
-            </p>
-            <p href="#" onclick="copyToClipboard('nahorniak@rada.gov.ua')">
+            </span>
+            <span onclick="copyToClipboard('nahorniak@rada.gov.ua')">
                 <img src="email-icon.png" alt="email">nahorniak@rada.gov.ua
-            </p>
+            </span>
         </div>
     </div>
     <div class="Verkhovna">
