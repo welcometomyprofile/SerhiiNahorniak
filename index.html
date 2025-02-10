@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Serhii Nahorniak</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: white;
+        }
+        .rada img {
+            width: 100px;
+            margin-bottom: 5px;
+        }
+        .Verkhovna img{
+            height: 50px;
+        }
+        .card {
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            border-top: 4px solid #171eaa;
+            border-bottom: 4px solid #171eaa;
+            text-align: center;
+            width: 100%;
+            max-width: 100%;
+        }
+        .profile-pic {
+            width: 200px;
+            border-radius: 6%;
+            margin-bottom: 15px;
+        }
+        .name {
+            font-size: 34px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+        .title {
+            font-size: 18px;
+            color: #171eaa;
+            margin-bottom: 15px;
+        }
+        .contact-info {
+            margin: 10px 0;
+        }
+        .text{
+            margin: 0px 20px 20px;
+        }
+        .contact-info p {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            color: #171eaa;
+            font-weight: bold;
+            margin: 5px 0;
+            cursor: pointer;
+        }
+        .contact-info p img {
+            width: 20px;
+            height: 20px;
+            margin-right: 8px;
+        }
+    </style>
+</head>
+<body>
+    <div class="rada">
+        <img src="rada.png" alt="rada">
+    </div>
+    <div class="card">
+        <img src="mainimg.jpg" alt="Profile Picture" class="profile-pic">
+        <div class="name">Serhii Nahorniak</div>
+        <div class="title">People’s Deputy of Ukraine</div>
+        <div class="text">Chairman of the Subcommittee on Energy Saving and Energy Efficiency within the Committee on Energy, Housing and Utility Services of the Verkhovna Rada of Ukraine</div>
+        <div class="contact-info">
+            <p href="#" onclick="copyToClipboard('+380 67 778 1440')">
+                <img src="whatsapp-icon.png" alt="WhatsApp">+380 67 778 1440
+            </p>
+            <p href="#" onclick="copyToClipboard('nahorniak@rada.gov.ua')">
+                <img src="email-icon.png" alt="email">nahorniak@rada.gov.ua
+            </p>
+        </div>
+    </div>
+    <div class="Verkhovna">
+        <img src="Verkhovna.png" alt="Verkhovna">
+    </div>
+</body>
+</html>
