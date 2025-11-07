@@ -2,8 +2,9 @@ BEGIN:VCARD
 VERSION:3.0
 N:Serhii Nahorniak;;;
 FN:Serhii Nahorniak
-TITLE:People’s Deputy of Ukraine
+TITLE:People’s Deputy of Ukraine, Verkhovna Rada
 TEL;TYPE=CELL,VOICE:+380677781440
 EMAIL;TYPE=INTERNET:nahorniak@rada.gov.ua
 END:VCARD
+
 
